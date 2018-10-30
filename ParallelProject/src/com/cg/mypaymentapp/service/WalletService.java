@@ -1,14 +1,12 @@
 package com.cg.mypaymentapp.service;
-import java.math.BigDecimal;
-
 import com.cg.mypaymentapp.beans.Customer;
 
 
 public interface WalletService {
-public Customer createAccount(String name ,String mobileno, BigDecimal amount);
 public Customer showBalance (String mobileno);
-public Customer fundTransfer (String sourceMobileNo,String targetMobileNo, BigDecimal amount);
-public Customer depositAmount (String mobileNo,BigDecimal amount );
-public Customer withdrawAmount(String mobileNo, BigDecimal amount);
+public void fundTransfer (String sourceMobileNo,String targetMobileNo, Double amount);
+public Customer depositAmount (String mobileNo,Double amount );
+public Customer withdrawAmount(String mobileNo, Double amount);
+public Customer createAccount(Customer customer);
 
 }
